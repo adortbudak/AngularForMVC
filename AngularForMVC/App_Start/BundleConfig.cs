@@ -28,12 +28,13 @@ namespace AngularForMVC
                       "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/bundles/mini-spa/style").Include(
-                "",
-                ""));
+                "~/Content/bootstrap.css",
+                "~/Content/app.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/mini-spa/style").Include(
-                "",
-                ""));
+            bundles.Add(new ScriptBundle("~/bundles/mini-spa/script").Include(
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-route.js",
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
         }
     }
 }
