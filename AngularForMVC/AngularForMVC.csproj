@@ -120,6 +120,9 @@
   <ItemGroup>
     <Content Include="app\AngularFormsApp.js" />
     <Content Include="app\DataService.js" />
+    <Content Include="app\EmployeeForm\efController.js" />
+    <Content Include="app\EmployeeForm\efDirective.js" />
+    <Content Include="app\EmployeeForm\efTemplate.html" />
     <Content Include="app\Home.html" />
     <Content Include="app\homeController.js" />
     <Content Include="Content\bootstrap.css" />
