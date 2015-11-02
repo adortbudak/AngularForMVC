@@ -8,11 +8,19 @@ namespace AngularForMVC.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Indexes this instance.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// Abouts this instance.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +28,10 @@ namespace AngularForMVC.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Contacts this instance.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
