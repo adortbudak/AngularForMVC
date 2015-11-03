@@ -2,7 +2,7 @@
     function ($http) {
 
         var getEmployees = function() {
-            return $http.get("Employee/GetEmployees");
+            return $http.get("api/EmployeeApi/GetEmployees");
         };
 
 
@@ -25,7 +25,7 @@
         };
 
         var insertEmployee = function(newEmployee) {
-            return $http.post("Employee/Create", newEmployee);
+            return $http.post("api/EmployeeApi/Post", newEmployee);
         };
 
         var updateEmployee = function(employee) {
