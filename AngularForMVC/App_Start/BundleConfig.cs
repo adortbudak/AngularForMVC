@@ -33,7 +33,15 @@ namespace AngularForMVC
             bundles.Add(new ScriptBundle("~/bundles/mini-spa/script").Include(
                 "~/Scripts/angular.js",
                 "~/Scripts/angular-route.js",
-                "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
+                "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                "~/app/AngularFormsApp.js",
+                "~/app/DataService.js",
+                "~/app/ValidationDirective.js",
+                "~/app/EmployeeForm/efController.js",
+                "~/app/homeController.js",
+                "~/app/EmployeeForm/efDirective.js"));
+
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

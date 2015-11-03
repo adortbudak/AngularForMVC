@@ -1,5 +1,11 @@
-﻿angularFormsApp.factory('DataService',
-    function () {
+﻿angularFormsApp.factory('DataService', ["$http",
+    function ($http) {
+
+        var getEmployees = function() {
+            return $http.get("Employee/GetEmployees");
+        };
+
+
         var getEmployee = function(id) {
             if (id == 123) {
                 return {
@@ -19,7 +25,7 @@
         };
 
         var insertEmployee = function(newEmployee) {
-            return true;
+            return $http.post("Employee/Create", newEmployee);
         };
 
         var updateEmployee = function(employee) {
@@ -29,7 +35,8 @@
         return {
             insertEmployee: insertEmployee,
             updateEmployee: updateEmployee,
-            getEmployee:getEmployee
+            getEmployee: getEmployee,
+            getEmployees: getEmployees
         }
 
-    });
+    }]);

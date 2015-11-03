@@ -18,14 +18,21 @@
         $scope.submitForm = function () {
 
             if ($scope.editableEmployee.id == 0) {
-                DataService.insertEmployee($scope.editableEmployee);
+                DataService.insertEmployee($scope.editableEmployee).then(
+                    function(results) {
+                        $scope.employee = angular.copy($scope.editableEmployee);
+                        $window.history.back();
+                    },
+                    function(results) {
+                        $scope.hasFormError = true;
+                        $scope.formErrors = results.statusText;
+                    });
             } else {
                 DataService.updateEmployee($scope.editableEmployee);
             }
 
 
-            $scope.employee = angular.copy($scope.editableEmployee);
-            $window.history.back();
+            
 
         };
 

@@ -1,6 +1,6 @@
 ﻿var angularFormsApp = angular.module('angularFormsApp', ["ngRoute"]);
 
-angularFormsApp.config(function($routeProvider) {
+angularFormsApp.config(function($routeProvider,$locationProvider) {
     $routeProvider
         .when("/home",
         {
@@ -20,5 +20,11 @@ angularFormsApp.config(function($routeProvider) {
         .otherwise({
             redirectTo: "/home"
         });
+
+    $locationProvider.html5Mode(
+    {
+        enabled: true,
+        requireBase: false
+    });
 });
 
